@@ -1,1 +1,344 @@
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Work+Sans:400,700,900");
+body {
+  overflow: hidden;
+}
 
+  /* Estilos CSS */
+  .error-message {
+    color: red;
+    text-align: center;
+    display: none; /* Inicialmente oculta */
+  }
+
+#loading-bar {
+  width: 0; /* Inicialmente definido como zero para começar invisível */
+  height: 2px; /* Altura da barra de carregamento */
+  background-color: #0a3c90; /* Cor azul para a barra de carregamento */
+  margin-top: 10px; /* Espaço superior para separar do texto */
+  transition: width 3s ease-in-out; /* Animação para a largura da barra de carregamento */
+}
+
+#depoisdoform {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 10px solid #0a3c90;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+#depoisdoform.hidden {
+  display: none;
+}
+
+#depoisdoform h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #0a3c90;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+#depoisdoform p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0a3c90;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  #depoisdoform {
+    width: 80%;
+    padding: 15px;
+    border-width: 5px;
+  }
+
+  #depoisdoform h2 {
+    font-size: 18px;
+  }
+
+  #depoisdoform p {
+    font-size: 14px;
+  }
+}
+
+#loading-bar {
+  width: 0;
+  height: 2px;
+  background-color: #0a3c90;
+  transition: width 3s; /* Mover a transição para o CSS */
+}
+
+
+
+body {
+  background-image: url('https://i.postimg.cc/7h6JKd06/Ativo-1-8.png');
+  background-size: cover; /* Faz a imagem cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+/*css do FORMULÁRIO*/
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+h1 {
+  color: #0a3c90;
+  font-size: 19px; /* Tamanho da fonte do título */
+  font-family: 'Montserrat', sans-serif; /* Fonte Montserrat com peso Black 900 */
+  font-weight: 800; /* Peso da fonte Black 900 */
+  margin-bottom: 8px;
+  padding: -1px;
+}
+h2 {
+  color: #1062eb;
+  font-size: 13px;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.form-container {
+  background-color: white;
+  border: 2px solid #0a3c90;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #0a3c90;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #0a3c90, #1062eb);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background: linear-gradient(90deg, #1062eb, #0a3c90);
+}
+
+@media (max-width: 500px) {
+  .form-container {
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 14px;
+  }
+
+  .form-container button {
+    padding: 8px;
+  }
+}
+
+
+/*css do FORMULÁRIO*/
+
+/* styles.css */
+.hidden {
+  display: none;
+}
+
+.custom-text .texto-personalizado{
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* styles.css */
+.custom-text {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.roulette {
+  font-family: "Work Sans", sans-serif;
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+.roulette .shadow {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0.3em 0 rgba(0, 0, 0, 0.25) inset;
+}
+.roulette .markers {
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.roulette .markers .marker {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -200px;
+  left: 200px;
+  transform-origin: 0% 400px;
+  border: 0 solid transparent;
+}
+.roulette .markers .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1em 0 1em 1.5em;
+  border-color: transparent transparent transparent #007bff;
+  position: absolute;
+  border-left-color: #ffffff;
+  top: 50%;
+  left: -1px;
+  margin-top: -1em;
+  filter: drop-shadow(0 0.25em 0 rgba(0, 0, 0, 0.25));
+}
+.roulette .spinner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: rotateZ(0deg);
+  /*performance boost*/
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.roulette .spinner .item {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -200px;
+  left: 200px;
+  transform-origin: 0% 400px;
+  border: 0 solid transparent;
+}
+.roulette .spinner .item .label {
+  display: block;
+  position: absolute;
+  color: #FFF;
+  font-weight: 800;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  transform-origin: 0 0;
+  font-size: 0.8em;
+}
+.roulette .spinner .item .label i, .roulette .spinner .item .label .text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 1em;
+  text-indent: 0;
+}
+.roulette .spinner .item .label i {
+  margin-right: 0.1em;
+}
+.roulette .button {
+  width: 10em;
+  height: 10em;
+  line-height: 10em;
+  top: 50%;
+  left: 50%;
+  margin-left: -5em;
+  margin-top: -5em;
+  font-weight: 800;
+  z-index: 998;
+  position: absolute;
+  background: #FFF;
+  border: none;
+  border-radius: 100%;
+  color: #0a3c90;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-shadow: 0 0.4em 0 #1062eb;
+  text-align: center;
+  transition: transform 0.15s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.roulette .button:hover {
+  color: inherit;
+}
+.roulette .button span {
+  font-size: 1.6em;
+  letter-spacing: -0.05em;
+}
+.roulette.busy .button {
+  transform: scale(0.9);
+  box-shadow: 0 0.15em 0 #1062eb;
+  color: #1062eb;
+  cursor: default;
+}
+
+/* CUSTOM LABELS */
+.roulette .spinner .item[data-type=quiz] .label {
+  font-size: 1.em;
+}
+
+.roulette .spinner .item[data-type=question] .label {
+  font-size: 1.em;
+
+}
+.roulette .spinner .item[data-type=replay] .label .text {
+  font-size: 1.em;
+  white-space: initial;
+  width: 1em;
+  text-align: center;
+  line-height: 1.;
+}
+.roulette .spinner .item[data-type=replay] .label i {
+  font-size: 1.em;
+}
+.roulette .spinner .item[data-type=time] .label i {
+  font-size: 1.em;
+}
